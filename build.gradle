@@ -2,15 +2,27 @@ plugins {
     id 'groovy'
 }
 
+apply plugin : 'maven'
+
 group 'powerdancer'
-version '1.0'
+version '1.2'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.3.11'
     compile gradleApi()
     compile localGroovy()
+
+    testCompile(
+            "org.mockito:mockito-core:2.19.0",
+            'org.projectlombok:lombok:1.18.0'
+    )
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter-api:5.1.0'
+    )
+    testRuntimeOnly(
+            'org.junit.jupiter:junit-jupiter-engine:5.1.0'
+    )
 }

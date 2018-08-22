@@ -1,4 +1,9 @@
 
 .idea/
 .gradle/
+out/
 
+testProj/userHome/native/
+testProj/userHome/.gradle/
+gradle.properties
+build/

@@ -1,0 +1,12 @@
+
+group 'powerdancerTest'
+version '1.0'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
