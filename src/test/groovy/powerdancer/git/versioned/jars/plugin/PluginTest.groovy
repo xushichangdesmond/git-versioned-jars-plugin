@@ -9,7 +9,8 @@ class PluginTest {
     @Test
     void myTest() {
         Project project = ProjectBuilder.builder().withProjectDir(new File("testProj")).build()
+        project.pluginManager.apply( 'java')
         project.pluginManager.apply 'powerdancer.git.versioned.jars.plugin'
-        project.tasks.build.execute()
+        project.exec {"build"}
     }
 }
